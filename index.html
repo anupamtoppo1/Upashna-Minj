@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Raksha Bandhan</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Google Fonts for a festive look -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- This div will hold the background image slideshow -->
+    <div id="slideshow-container" class="slideshow">
+        <!-- Default placeholder images will be replaced by user uploads -->
+        <img class="slideshow-image active" src="https://images.unsplash.com/photo-1597957303734-b131a9b4d452?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE4fHxyYWtoaXxlbnwwfHx8fDE2Mjk2ODQwMzY&ixlib=rb-1.2.1&q=80&w=1080" alt="Rakhi placeholder image 1">
+        <img class="slideshow-image" src="https://images.unsplash.com/photo-1629208189218-e41b0933a39a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fHxyYWtzaGElMjBiYW5kaGFufGVufDB8fHx8MTYyOTY4NDAwMw&ixlib=rb-1.2.1&q=80&w=1080" alt="Rakhi placeholder image 2">
+        <img class="slideshow-image" src="https://images.unsplash.com/photo-1597957303734-b131a9b4d452?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE4fHxyYWtoaXxlbnwwfHx8fDE2Mjk2ODQwMzY&ixlib=rb-1.2.1&q=80&w=1080" alt="Rakhi placeholder image 3">
+    </div>
+
+    <!-- This overlay contains all the content on top of the slideshow -->
+    <div class="overlay">
+        <div class="rakhi-wish-container">
+            <div class="rakhi-border-top"></div>
+            <h1 class="rakhi-wish">Happy Raksha Bandhan</h1>
+            <p class="rakhi-subtext">Celebrating our special bond of love and protection.</p>
+            <div class="rakhi-border-bottom"></div>
+        </div>
+
+        <div class="upload-section">
+            <!-- This label is styled as a button to trigger the hidden file input -->
+            <label for="photo-upload" class="upload-label">✨ Upload 5-6 Photos ✨</label>
+            <input type="file" id="photo-upload" multiple accept="image/*">
+        </div>
+    </div>
+
+    <!-- Background music player -->
+    <audio id="background-music" loop muted>
+        <!-- A soft instrumental track. Replace the src with your preferred music file -->
+        <source src="https://cdn.pixabay.com/download/audio/2022/08/27/audio_510a2732a3.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Music play/pause button -->
+    <button id="music-control">▶️</button>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>

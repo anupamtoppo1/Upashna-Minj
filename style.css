@@ -1,0 +1,144 @@
+/* --- General Styling --- */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden; /* Prevents scrollbars */
+    background-color: #000;
+}
+
+/* --- Background Slideshow --- */
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place it behind all other content */
+}
+
+.slideshow-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the screen without distortion */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
+}
+
+.slideshow-image.active {
+    opacity: 1; /* Make the current image visible */
+}
+
+/* --- Overlay Content --- */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Rakhi Message and Decorative Borders --- */
+.rakhi-wish-container {
+    position: relative;
+    padding: 30px;
+}
+
+/* Decorative border using pseudo-elements */
+.rakhi-border-top::before, .rakhi-border-bottom::after {
+    content: '❃'; /* A simple floral character */
+    font-size: 2.5em;
+    color: gold;
+    opacity: 0.6;
+    display: block;
+}
+
+.rakhi-wish {
+    font-family: 'Lobster', cursive; /* A festive, stylish font */
+    font-size: 5rem;
+    color: gold;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+    margin: 0;
+    z-index: 1;
+}
+
+.rakhi-subtext {
+    font-size: 1.5rem;
+    color: #ffebcd; /* A soft, warm off-white color */
+    margin-top: 10px;
+}
+
+/* --- Photo Upload Section --- */
+.upload-section {
+    margin-top: 30px;
+}
+
+/* Hide the actual file input element */
+#photo-upload {
+    display: none;
+}
+
+.upload-label {
+    cursor: pointer;
+    padding: 12px 25px;
+    background: #FF9933; /* Saffron color */
+    color: #fff;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 2px solid #FFD700; /* Gold border */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.upload-label:hover {
+    background-color: #d47f2a;
+    transform: scale(1.05);
+}
+
+/* --- Music Controls --- */
+#music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    z-index: 100;
+}
+
+#music-control:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Responsive Design for Mobile Devices --- */
+@media (max-width: 768px) {
+    .rakhi-wish {
+        font-size: 2.8rem;
+    }
+    .rakhi-subtext {
+        font-size: 1.1rem;
+    }
+    .upload-label {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
